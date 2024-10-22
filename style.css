@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Playwrite GB S', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+#countdown-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  background-color: transparent; 
+}
+
+#fps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 0.5em;
+}
+
+.text-message {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  background-color: transparent; 
+  font-size: 20px; 
+}
+
+.hidden {
+  opacity: 0;
+  position: relative; 
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease; 
+}
+
+.visible {
+  opacity: 1;
+  position: relative; 
+  transform: translateY(0);
+  transition: opacity 1.5s ease, transform 1.5s ease; 
+}
+
+/* Media Queries for iPhone 14 Plus */
+@media only screen and (min-device-width: 430px) and (max-device-width: 430px) and (orientation: portrait),
+       only screen and (min-device-width: 930px) and (max-device-width: 930px) and (orientation: landscape) {
+  body {
+    font-size: 14px;
+  }
+  #countdown-container {
+    top: 10%;
+    padding: 1.5em;
+  }
+  .text-message {
+    font-size: 28px;
+    padding: 1.5em;
+  }
+  #fps {
+    padding: 1em;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+       only screen and (min-resolution: 458dpi) {
+  #countdown-container {
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  .text-message {
+    color: #f0f0f0;
+  }
+}
